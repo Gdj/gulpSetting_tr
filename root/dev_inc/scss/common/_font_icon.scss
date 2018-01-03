@@ -3,7 +3,7 @@
 /* 아이콘 폰트 */
 .spfont { display: inline-block; }
 .spfont:before {
-    display: block; font-size: 30px; line-height: 1;
+    display: block; font-size: 30px; normalize : true;
 }
 
 .spfont.spfont-arrow_next {}

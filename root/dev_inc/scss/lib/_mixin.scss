@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 /*  _mixin.scss
-    @include box-sizing(50%)
-    @extend .error;
+    xxx {
+        @include box-sizing(50%)  
+    }
 */
 
 @mixin box-sizing($type:border-box) {
@@ -29,9 +30,15 @@
 
 
 @mixin ellipsis {
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+@mixin ellipsis-line($line) {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    display: -webkit-box;  -webkit-line-clamp: $line; -webkit-box-orient: vertical;
 }
 
 

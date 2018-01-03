@@ -28,7 +28,7 @@
 
 .spfont-envelope:before { content: "\E003"; }
 
-/*  _mixin.scss @include box-sizing(50%) @extend .error; */
+/*  _mixin.scss xxx { @include box-sizing(50%)   } */
 html, body { -webkit-text-size-adjust: none; }
 
 /*글자자동조절방지*/
@@ -302,7 +302,7 @@ h6 { font-size: 13px; }
 /* 아이콘 폰트 */
 .spfont { display: inline-block; }
 
-.spfont:before { display: block; font-size: 30px; line-height: 1; }
+.spfont:before { display: block; font-size: 30px; normalize: true; }
 
 .spfont.spfont-envelope:before { font-size: 20px; color: red; }
 
