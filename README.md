@@ -20,6 +20,5 @@
 3. 상단 내용 실행및 배포용 추출.                    (gulp build)
 
 
-## Notes
-----
-* "dev_홀더이름"은 작업용홀더 이고 "dev_" 빠진 홀더는 dev_에서 생성된 홀더입니다.
+
+<blockquote><b>NOTE!</b> "dev_홀더이름"은 작업용홀더 이고 "dev_" 빠진 홀더는 dev_에서 생성된 홀더입니다.</blockquote>
