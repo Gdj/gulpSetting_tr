@@ -299,6 +299,12 @@ h6 { font-size: 13px; }
 
 .text-warning { font-family: Dotum; font-size: 12px; color: #999999; line-height: 1.33; letter-spacing: -0.4px; }
 
+/* 한줄 말줄임 */
+.ellipsis { width: 300px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* 여러줄 말줄임 */
+.ellipsis-3 { width: 300px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
 /* 아이콘 폰트 */
 .spfont { display: inline-block; }
 

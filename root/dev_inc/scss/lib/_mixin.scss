@@ -36,7 +36,6 @@
 }
 @mixin ellipsis-line($line) {
     overflow:hidden;
-    white-space:nowrap;
     text-overflow:ellipsis;
     display: -webkit-box;  -webkit-line-clamp: $line; -webkit-box-orient: vertical;
 }
