@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>style guide</title>    
+    <link rel="stylesheet" href="../_inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../_inc/css/common.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>    
+    <![endif]--><!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>UI guide</title>    
+    <link rel="stylesheet" href="../_inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../_inc/css/common.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>    
+    <![endif]-->
+    <script src="../_inc/js/library/jquery.min.js"></script>
+    <script src="../_inc/js/library/jquerylibrary.min.js"></script>
+    <script src="../_inc/js/common.js"></script>
+    <style>
+        h1 { text-align: center; color:black; }
+        h2 { background-color: #333; color: aliceblue; padding:5px 10px; cursor: pointer;}
+        h2:hover:after { content: "scrolltop"; margin-left: 30px; font-size:13px; color: crimson; vertical-align: middle;}
+        h3 { background-color: #ededed; padding: 3px 20px; }
+        .item-inner { margin-bottom: 20px; }
+        .tab-list { overflow: hidden; }
+        .tab-list li { float: left;  }
+        .tab-list li a { display: block; margin: 10px;padding: 7px 15px;font-weight: bold;color: #fff;background-color: #11a0d8;border: 0;border-radius: 5px;}
+        
+        
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("h2").on("click", function(e){ console.log("gogogo")             
+               $('body,html').animate({ scrollTop: 0}, 100);
+                return false; 
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->  
+        <div id="header">
+            <h1>style guide</h1>
+            <ul class="tab-list">
+                <li><a href="#typo">typo</a></li>
+               
+            </ul>
+        </div>
+        <!-- //header -->  
+         <!-- container -->  
+        <div id="container">            
+            <div id="contents">            
+                <div class="article" id="typo">
+                    <h2>tyop</h2>      
+                    <div class="item-inner">
+                        <h3>- h1(.h1) </h3>
+                        <h1 class="h1">내차팔기, <strong>단 하루</strong>면 끝!</h1>
+                    </div>
+                    <div class="item-inner">
+                        <h3>- h2(.h2) </h3>
+                        <h2 class="h2">실시간 경매 현황</h2>
+                    </div>  
+                    <div class="item-inner">
+                        <h3>- h3(.h3) </h3>
+                        <h3 class="h3">실시간 경매 현황</h3>
+                    </div> 
+                    <div class="item-inner">
+                        <h3>- 본문(p) </h3>
+                        <p>실시간 경매 현황</p>
+                    </div> 
+                    <div class="item-inner">
+                        <h3>- 저채 도글씨(.text-muted) </h3>
+                        <span class="text-muted">2014/01 |71,923 km | 오토</span>
+                    </div> 
+                    <div class="item-inner">
+                        <h3>- 주의(.text-warning) </h3>
+                        <span class="text-warning">※ 판매 확정 시, 차량 대금의 1% (최저10만원~최대30만원, vat별도)의 수수료 발생. 단, 노후차량은 출품수수료 33,000원 선납입 후 진행됩니다.</span>
+                    </div> 
+                    
+                </div>
+                
+             
+                
+                
+                
+            </div>           
+        </div>
+        <!-- //container -->         
+   
+        
+        <!-- footer -->  
+        <div id="footer"></div>
+        <!-- //footer -->  
+        
+    </div>
+</body>
+</html>

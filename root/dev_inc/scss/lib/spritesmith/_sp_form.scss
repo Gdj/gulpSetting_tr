@@ -1,0 +1,26 @@
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+    $checkbox-off: 0px 0px 0px 0px 20px 20px 60px 60px '../images/common/sp_form.png' 'checkbox-off' 'sp_form';
+    $checkbox-on: 40px 0px -40px 0px 20px 20px 60px 60px '../images/common/sp_form.png' 'checkbox-on' 'sp_form';
+    $radio-off: 0px 40px 0px -40px 20px 20px 60px 60px '../images/common/sp_form.png' 'radio-off' 'sp_form';
+    $radio-on: 40px 40px -40px -40px 20px 20px 60px 60px '../images/common/sp_form.png' 'radio-on' 'sp_form';
+
+//ancestor
+    $sp_form-width: 60px;
+    $sp_form-height: 60px;
+    $sp_form-image: '../images/common/sp_form.png';
+    $sp_form-sprites: ($checkbox-off, $checkbox-on, $radio-off, $radio-on, );
+    $sp_form_sprites_name: (checkbox-off, checkbox-on, radio-off, radio-on, );
+    $sp_form: (60px, 60px, '../images/common/sp_form.png', $sp_form-sprites, );
+
+//mixin
+
+        %sp_form {
+        background-image: url('../images/common/sp_form.png');
+        }
+
+        @mixin sp_form($sprite) {
+        @extend %sp_form;
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
+        }

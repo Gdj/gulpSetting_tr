@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 상하 화살표~ */
+.arrow-btn {
+    display:inline-block;
+    .action {
+		display: block;
+		overflow: hidden;
+		text-align: right;
+        width:34px;
+        height: 35px;
+		line-height: 35px;
+		vertical-align: middle;
+	}
+	.action.updown:after {
+        display: block;
+		content: '';
+		vertical-align: middle;
+		@include sp_icons($arr_down);
+	}
+	&.on .action.updown:after {
+		content: '';
+		vertical-align: middle;
+		@include sp_icons($arr_up);
+	}
+}

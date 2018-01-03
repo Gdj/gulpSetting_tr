@@ -1,0 +1,24 @@
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+    $arr_down: 0px 0px 0px 0px 34px 35px 88px 35px '../images/common/sp_icons.png' 'arr_down' 'sp_icons';
+    $arr_up: 54px 0px -54px 0px 34px 35px 88px 35px '../images/common/sp_icons.png' 'arr_up' 'sp_icons';
+
+//ancestor
+    $sp_icons-width: 88px;
+    $sp_icons-height: 35px;
+    $sp_icons-image: '../images/common/sp_icons.png';
+    $sp_icons-sprites: ($arr_down, $arr_up, );
+    $sp_icons_sprites_name: (arr_down, arr_up, );
+    $sp_icons: (88px, 35px, '../images/common/sp_icons.png', $sp_icons-sprites, );
+
+//mixin
+
+        %sp_icons {
+        background-image: url('../images/common/sp_icons.png');
+        }
+
+        @mixin sp_icons($sprite) {
+        @extend %sp_icons;
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
+        }

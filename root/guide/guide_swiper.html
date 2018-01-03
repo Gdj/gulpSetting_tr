@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sample_swiper</title>
+    <link rel="stylesheet" href="../inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../inc/css/common.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <style>
+        .gallery_view { width: 500px; margin: 0 auto;}
+        .gallery_view .gallery_center {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .gallery_view .pagination { text-align: center; }
+        .gallery_view .pagination .swiper-pagination-bullet { margin:0 2px;}
+
+    </style>
+    <script src="../inc/js/library/jquery.min.js"></script>
+    <script src="../inc/js/library/jquerylibrary.min.js"></script>
+    <script src="../inc/js/common.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		// Swiper 세팅
+		var mySwiper = new Swiper('.gallery_center',{
+			autoplay : 3000,
+			loop: true,
+			pagination: '.pagination',
+			paginationClickable: true,
+
+			onSlideChangeEnd: function(swiper){										// 움직임이 끝나면 실행
+				$(".pagination li").removeClass("current");
+				$(".pagination li").eq(swiper.activeLoopIndex).addClass("current");
+			}
+		})
+
+      // 좌우버튼
+	  $('.prev').on('click', function(e){
+		e.preventDefault();
+		mySwiper.slidePrev();
+	  })
+	  $('.next').on('click', function(e){
+		e.preventDefault();
+		mySwiper.slideNext();
+	  })
+
+      // 컨텐츠에 마우스 올리면 일시정지
+	  $(".gallery_center").hover(function(){
+		mySwiper.stopAutoplay();
+	  } ,
+	  function(){
+		mySwiper.startAutoplay();
+	  })
+
+	})
+    </script>
+</head>
+
+<body>
+
+<div class="gallery_view" style="">
+	<div class="gallery_center">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+			<div class="swiper-slide"><img src="http://placehold.it/500x300" width="500" height="300"  alt="" /></div>
+		</div>
+		<a href="#" class="prev">Prev</a>
+		<a href="#" class="next">Next</a>
+	</div>
+	<div class="pagination"></div>
+</div>
+
+<!-- // wrap -->
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* 아이콘 폰트 */
+.spfont { display: inline-block; }
+.spfont:before {
+    display: block; font-size: 30px; line-height: 1;
+}
+
+.spfont.spfont-arrow_next {}
+.spfont.spfont-arrow_prev {}
+.spfont.spfont-envelope:before   { font-size: 20px; color: red;}

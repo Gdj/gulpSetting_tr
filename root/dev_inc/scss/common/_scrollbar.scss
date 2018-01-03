@@ -1,0 +1,37 @@
+// 컨텐츠 영역
+.mCSB_inside>.mCSB_container {
+    margin-right: 0px;
+}
+
+
+// bar 기본색
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background-color: rgba(0,0,0,0); }
+
+// bar Hover
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color:rgba(0,0,0,1);
+}
+
+// bar 활성화색
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background-color:rgba(0,0,0,1);
+}
+
+// 컨텐츠 hover: bar 활성화색
+.mCustomScrollBox:hover .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color:rgba(0,0,0,1);
+}
+
+
+
+// bar 영역 bg
+.mCSB_scrollTools .mCSB_draggerRail { background-color: rgba(0,0,0,.0); 
+    -webkit-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+    transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
+}
+
+// 컨텐츠 hover: bar 영역 bg
+.mCSB_scrollTools.mCSB_scrollTools_onDrag .mCSB_draggerRail,
+.mCustomScrollBox:hover .mCSB_scrollTools .mCSB_draggerRail { background-color: rgba(0,0,0,.3); }

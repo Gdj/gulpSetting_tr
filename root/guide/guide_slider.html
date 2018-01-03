@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sample_swiper</title>    
+    <link rel="stylesheet" href="../_inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../_inc/css/common.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>    
+    <![endif]-->
+    <style>
+        .slider-box {margin-top: 30px;}        
+    </style> 
+    <script src="../_inc/js/library/jquery.min.js"></script>
+    <script src="../_inc/js/library/jquerylibrary.min.js"></script>
+    <script src="../_inc/js/common.min.js"></script>	
+    <script>
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            step: 1,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {
+                sliderWatch();
+            }
+        });
+        function sliderWatch(){
+            $( "#amount-form" ).val( "￦" + $( "#slider-range" ).slider( "values", 0 ) );
+            $( "#amount-to" ).val( "￦" + $( "#slider-range" ).slider( "values", 1 ) );
+        }
+        sliderWatch();
+    } );
+        
+    // 스라이터 비활성화
+    $( function() {
+        $( "#slider-range2" ).slider({  range: true });
+        $( "#slider-range2" ).slider( "option", "disabled", true );
+    } );
+    </script>
+</head>
+<body>
+
+<p>
+  <label for="amount">가격:</label>
+  
+  <input type="text" name="" id="amount-form" readonly>
+  <input type="text" name="" id="amount-to" readonly>
+</p>
+ 
+<div id="slider-range" class="slider-box"></div>
+ 
+<div id="slider-range2" class="slider-box"></div>
+</body>
+</html>

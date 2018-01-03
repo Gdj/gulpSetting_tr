@@ -1,0 +1,28 @@
+<tamplate>
+    <link rel="stylesheet" href="../_inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../_inc/css/common.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>    
+    <![endif]-->
+    <script src="../_inc/js/library/jquery.min.js"></script>
+    <script src="../_inc/js/library/jquerylibrary.min.js"></script>
+    <script src="../_inc/js/common.js"></script>
+    <style>
+        h1 { text-align: center; }
+        h2 { background-color: #ccc; padding:5px 10px; cursor: pointer;}
+        h2:hover:after { content: "scrolltop"; margin-left: 30px; font-size:13px; color: crimson; vertical-align: middle;}
+        h3 { background-color: #ededed; padding: 3px 20px; }
+        .item-inner { margin-bottom: 20px; }
+        .tab-list { overflow: hidden; }
+        .tab-list li { float: left;  }
+        .tab-list li a { display: block; margin: 10px;padding: 7px 15px;font-weight: bold;color: #fff;background-color: #11a0d8;border: 0;border-radius: 5px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("h2").on("click", function(e){ 
+               $('body,html').animate({ scrollTop: 0}, 100);
+                return false; 
+            })
+        })
+    </script>
+</tamplate>

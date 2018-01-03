@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* _variables.scss */
+
+//root path
+//$G-path: '../';
+
+//img path
+//$G-path-img: $G-path + 'img/';
+
+//body color
+//$G-body-color: #2f2d2d;
+
+// Key Color 
+$colorD: #6d6e70;
+$colorA: #f56209;
+
+
+// fonts Name
+$baseFT : "Malgun Gothic"; 
+
+
+// form Color
+$formH   : 30px    ;    // text, select 높이
+$lineC_d : #d2d2d1 ;     // 라인색 기본값
+$lineC_f : #f56209 ;      // 라인색 포커스값
+
+
+// slider
+$sliderBG_d : #ffffff;     // 슬라이터 bg 기본 
+$sliderBG_a : #f56209;      // 슬라이터 bg 활성화 
+$sliderDra_d : #ffffff;    // 슬라이터 드레거 기본 
+$sliderDra_a : #686868      // 슬라이터 드레거 활성화 

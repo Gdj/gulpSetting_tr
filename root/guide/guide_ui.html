@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>UI guide</title>
+    <link rel="stylesheet" href="../inc/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="../inc/css/common.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 	type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <script src="../inc/js/library/jquery.min.js"></script>
+    <script src="../inc/js/library/jquerylibrary.js"></script>
+    <script src="../inc/js/common.js"></script>
+    <style>
+        h1 { text-align: center; color:black;}
+        h2 { background-color: #333; color: aliceblue; padding:5px 10px; cursor: pointer;}
+        h2:hover:after { content: "scrolltop"; margin-left: 30px; font-size:13px; color: crimson; vertical-align: middle;}
+        h3 { background-color: #ededed; padding: 3px 20px; }
+        .item-inner { margin-bottom: 20px; }
+        .tab-list { overflow: hidden; }
+        .tab-list li { float: left;  }
+        .tab-list li a { display: block; margin: 10px;padding: 7px 15px;font-weight: bold;color: #fff;background-color: #11a0d8;border: 0;border-radius: 5px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("h2").on("click", function(e){ console.log("gogogo")
+               $('body,html').animate({ scrollTop: 0}, 100);
+                return false;
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div id="header">
+            <h1>UI guide</h1>
+            <ul class="tab-list">
+                <li><a href="#from">from</a></li>
+                <li><a href="#scrollbar">스크롤바</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#font_icon">font_icon</a></li>
+                <li><a href="#sprite_icon">sprite_icon</a></li>
+            </ul>
+        </div>
+        <!-- //header -->
+         <!-- container -->
+        <div id="container">
+            <div id="contents">
+
+                <div class="article" id="from">
+                    <h2>form</h2>
+                    <div class="item-inner">
+                        <h3>- text </h3>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="item-inner">
+                        <h3>- radio(.trp.radio-box)</h3>
+                        <spna class="trp radio-box">
+                           <input id="radio1-1" type="radio" name="radioSet1">
+                           <label for="radio1-1">radio1</label>
+                        </spna>
+                        <spna class="trp radio-box">
+                            <input id="radio1-2" type="radio" name="radioSet1">
+                            <label for="radio1-2">radio2</label>
+                        </spna>
+                        <spna class="trp radio-box">
+                            <input id="radio1-3" type="radio" name="radioSet1">
+                            <label for="radio1-3">radio3</label>
+                        </spna>  <br>
+                        <spna class="trp radio-box">
+                           <input id="radio2-1" type="radio" name="radioSet2">
+                           <label for="radio2-1">radioSet2</label>
+                        </spna>
+                        <spna class="trp radio-box">
+                            <input id="radio2-2" type="radio" name="radioSet2">
+                            <label for="radio2-2">radioSet2</label>
+                        </spna>
+                        <spna class="trp radio-box">
+                            <input id="radio2-3" type="radio" name="radioSet2">
+                            <label for="radio2-3">radioSet2</label>
+                        </spna>
+                    </div>
+
+                    <div class="item-inner">
+                        <h3>- checkbox(.trp.checkbox-box)</h3>
+                        <spna class="trp checkbox-box">
+                           <input id="checkbox1" type="checkbox" name="">
+                           <label for="radio1">checkbox1</label>
+                        </spna>
+                        <spna class="trp checkbox-box">
+                            <input id="checkbox2" type="checkbox" name="">
+                            <label for="radio2">checkbox2</label>
+                        </spna>
+                        <spna class="trp checkbox-box">
+                            <input id="checkbox3" type="checkbox" name="">
+                            <label for="radio3">checkbox3</label>
+                        </spna>
+                    </div>
+                    <div class="item-inner">
+                        <h3>- select(.select2Basic)</h3>
+                        <select class="select2Basic" style="width:100%" id="id_label_single">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="article" id="scrollbar">
+                    <h2>스크롤바</h2>
+                    <div class="item-inner">
+                        <h3>- mCustomScrollbar</h3>
+                        <div><iframe src="guide_mCustomScrollbar.html" frameborder="0" width="100%" height="320" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"
+                         ></iframe></div>
+                    </div>
+                </div>
+
+                <div class="article" id="gallery">
+                    <h2>Gallery</h2>
+                    <div class="item-inner">
+                        <h3>- swiper</h3>
+                        <div><iframe src="guide_swiper.html" frameborder="0" width="100%" height="350" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"
+                         ></iframe></div>
+                         <div id="swiperr"></div>
+                        <script>
+                            function load_home() {
+                            document.getElementById("swiperr").innerHTML='<object type="text/html" data="guide_swiper.html" ></object>';}
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="article" id="font_icon">
+                    <h2>icon font</h2>
+                    <div class="item-inner">
+                        <h3>- arrow</h3>
+                        <div class="">
+                            <i class="spfont spfont-arrow_prev"></i>
+                            <i class="spfont spfont-arrow_next"></i>
+                        </div>
+                    </div>
+                    <div class="item-inner">
+                        <h3>- icon</h3>
+                        <div class="">
+                            <i class="spfont spfont-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article" id="sprite_icon">
+                    <h2>sprite icon</h2>
+                    <div class="item-inner">
+                        <h3>- arrow</h3>
+                        <div class="">
+                            <a href="#" class="arrow-btn"><i class="action updown"></i></a>
+                            <a href="#" class="arrow-btn on"><i class="action updown"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //container -->
+
+
+        <!-- footer -->
+        <div id="footer"></div>
+        <!-- //footer -->
+
+    </div>
+</body>
+</html>

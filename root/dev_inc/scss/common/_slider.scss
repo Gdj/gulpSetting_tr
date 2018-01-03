@@ -1,0 +1,7 @@
+// 슬라이터 BG
+.ui-widget-content { background-color: $sliderBG_d; }
+.ui-widget-header { background-color: $sliderBG_a;  }
+
+// 슬라이더 드래거
+.ui-slider-handle.ui-corner-all.ui-state-default { background-color: $sliderDra_d; }
+.ui-slider-handle.ui-corner-all.ui-state-default.ui-state-active { background-color: $sliderDra_a; }

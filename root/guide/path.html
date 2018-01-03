@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Project Name</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js" ></script>
+		<style>
+			h1 {padding-left:20px;}
+			p{margin:0; padding:0}
+			body{font-family:Malgun Gothic,'맑은 고딕'; margin:0;}
+			.wrap{ margin:20px;}
+			table{width:100%; border-collapse:collapse; font-size:13px; letter-spacing: -1px; border:1px solid #ebebeb; border-top:2px solid #3f3f3f;  }
+			thead th{background-color:#fafafa; border-bottom:2px solid #3f3f3f; color:#000; padding:10px 0; border-left:1px solid #ebebeb;}
+			thead th:first-child{border-left:0}
+			th{border-top:1px solid #ebebeb;border-left:1px solid #ebebeb; color:#333; padding:10px 20px; color:#000; background-color:#fafafa; font-weight:normal;}
+			th:first-child{border-left:0px solid #ebebeb;}
+			tbody th{text-align:left; padding:10px 20px;}
+			td{border-top:1px solid #ebebeb; color:#616161; text-align:left; padding:10px 20px; border-left:1px solid #ebebeb;}
+			tr.complete td{cursor:pointer; }
+			a{color:#616161; text-decoration:none;}
+			tr.first th,tr.first td{border-top:1px solid #666;}
+			tr.last th,tr.last td{border-bottom:1px solid #666;}
+			.tac{text-align:center;}
+			.fc_r{color:red;}
+			.fc_b{color:mediumblue;}
+			.tb_b{ background-color: black; color: #fff; }
+			.tb_dg{ background-color: darkgray; color: #fff; }
+			em.alert {  display: inline-block; padding: 2px 4px; border-radius: 5px;
+				font-size: 11px; color:#fff; font-style: normal; font-weight: bold;
+				background-color: darkorange; }
+			.last_change {  display: inline-block; padding: 2px 4px; border-radius: 5px;
+			font-size: 11px; color:#fff; font-style: normal; font-weight: bold;
+			background-color:darkred; }
+		</style>
+	</head>
+	<body>
+
+	<h1>Project Name</h1>
+		<div class="wrap">
+			<table>
+				<colgroup>
+					<col width="130px" />
+					<col width="180px" />
+					<col width="200px" />
+					<col width="380px" />
+					<col width="200px" />
+					<col width="auto" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Depth1</th>
+						<th>Depth2</th>
+						<th>Depth3</th>
+						<th>File</th>
+						<th>Date</th>
+						<th>Memo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="pop first">
+						<th>GUIDE</th>
+						<th>STYLE</th>
+						<th>STYLE GUIDE</th>
+						<td class="link">./guide_style.html</td>
+						<td class="tac">
+							<div class="last_change">2017-0000 마지막수정일</div>
+						</td>
+						<td><em class="alert">알림</em></td>
+					</tr>
+					<tr class="pop">
+						<th></th>
+						<th>UI</th>
+						<th>UI GUIDE</th>
+						<td class="link">./guide_ui.html</td>
+						<td class="tac">
+							<div class="last_change">2017-0000 마지막수정일</div>
+						</td>
+						<td><em class="alert">알림</em></td>
+					</tr>
+					<tr class="pop">
+						<th></th>
+						<th>LAYOUT</th>
+						<th>LAYOUT GUIDE</th>
+						<td class="link">./guide_layout.html</td>
+						<td class="tac">
+							<div class="last_change">2017-0000 마지막수정일</div>
+						</td>
+						<td><em class="alert">알림</em></td>
+					</tr>
+					<tr class="pop first">
+						<th>메인/공용</th>
+						<th></th>
+						<th>메인</th>
+						<td class="link">../html/main.html</td>
+						<td class="tac">2017-00-00</td>
+						<td>-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				var url ="";
+				$('tr').on('mouseover', function(){
+					url = $(this).find('td.link').html();
+					if (url && url.length > 2) {
+						$(this).find('td').css('background-color','#b1dcdc');
+						//$(this).find('th').css('background-color','#eeeeee');
+					}
+				});
+				$('tr').on('mouseout', function(){
+					url = $(this).find('td.link').html();
+					if (url && url.length > 2) {
+						$(this).find('td').css('background-color','#ffffff');
+						//$(this).find('th').css('background-color','#fafafa');
+					}
+				})
+				$('tr.pop td').on('click',function(){
+					url = $(this).parent('tr').find('td.link').html();
+					if (url && url.length > 2) {
+						window.open(url, "_blank");
+					}
+				})
+				$('tr').each(function(e) {
+					url = $(this).find('td.link').html();
+					if (url && url.length > 2) {
+						$(this).addClass('complete');
+					}
+				});
+				var $tac = $(".tac");
+				$tac.each(function(i) {
+					if ($(this).text() == "2015-11-30")
+					{
+						$(this).css("color","red").text($(this).text() + "수정");
+					}
+				});
+				var $yet = $(".yet");
+				$yet.each(function(i) {
+					$(this).find("th").eq(2).css("background-color","yellow");
+				});
+
+			})
+		</script>
+	</body>
+</html>
