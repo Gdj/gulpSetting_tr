@@ -1,5 +1,7 @@
-## Initial Setup
+# gulp 통합세팅
 ----
+
+## Initial Setup
 1. node.js 설치                          : [node.js]https://nodejs.org/en/download/
 2. gulp-cli 터미널 설치                   : npm install -g gulp-cli
 3. package.json(node module) 터미널 설치  : npm install
@@ -7,7 +9,6 @@
 
 
 ## "gulpfile.js" 기능 및 실행방법(터미널실행)
-----
 * sass 통합, min.css 추출, sourcemaps생성
 * autoprefixer 지원
 * js 통합, min.js 추출, sourcemaps생성
@@ -21,7 +22,6 @@
 
 
 ## Notes
-----
 <blockquote>
     "dev_홀더이름"은 작업용홀더 이고 "dev_" 빠진 홀더는 dev_에서 생성된 홀더입니다.
 </blockquote>
